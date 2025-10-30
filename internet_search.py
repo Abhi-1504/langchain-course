@@ -11,8 +11,8 @@ from langchain_tavily import TavilySearch
 load_dotenv()
 
 tools = [TavilySearch()]
-llm = ChatOpenAI(model='gpt-4')
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro")
+llm = ChatOpenAI(model='gpt-4') # For OpenAI GPT Model
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro") # for Google Gemini Model
 react_prompt = hub.pull("hwchase17/react")
 agent = create_react_agent(
     llm,
